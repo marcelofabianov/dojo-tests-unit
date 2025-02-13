@@ -1,0 +1,12 @@
+services:
+  app:
+    container_name: app
+    build:
+      context: .
+    restart: always
+    command: php -S 0.0.0.0:8001 -t public
+    volumes:
+      - .:/var/www
+    ports:
+      - "8001:8001"
+      - "9003:9003"
